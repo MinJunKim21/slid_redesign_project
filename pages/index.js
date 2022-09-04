@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Hero from '../components/Hero';
+import Instruction from '../components/Instruction';
+import Review from '../components/Review';
 import TopBar from '../components/TopBar';
 import VideoPart from '../components/VideoPart';
+import DownloadVersion from '../components/DownloadVersion';
+import Partners from '../components/Partners';
+import TryPlan from '../components/TryPlan';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -19,9 +25,16 @@ export default function Home() {
         <TopBar />
         <Hero />
         <VideoPart />
+        <Instruction />
+        <Review />
+        <DownloadVersion />
+        <Partners />
+        <TryPlan />
       </main>
 
-      <footer></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
