@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BsCheck2 } from 'react-icons/Bs';
+import { BsCheck2 } from 'react-icons/bs';
 import { AiOutlineRight } from 'react-icons/ai';
 import { IoMdBrowsers } from 'react-icons/io';
 import { BiLaptop } from 'react-icons/bi';
