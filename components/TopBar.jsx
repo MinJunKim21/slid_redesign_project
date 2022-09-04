@@ -12,15 +12,15 @@ function TopBar() {
           alt=""
         />
         <div className="text-xs font-semibold space-x-2">
-          <a className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
+          <span className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
             로그인
-          </a>
-          <a
+          </span>
+          <span
             href="/signup"
             className="text-white bg-[#2e90ff] rounded-lg py-2 px-3 hover:bg-blue-500"
           >
             무료 플랜 시작하기
-          </a>
+          </span>
         </div>
       </div>
     </div>

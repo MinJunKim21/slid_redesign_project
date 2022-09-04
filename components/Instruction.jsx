@@ -9,7 +9,8 @@ function Instruction() {
     <div>
       <div>
         <h3 className="font-semibold text-lg mt-20 px-4 ">
-          동영상 핵심 장면을 1초 만에 <br /> 내 것으로 만드는 '원클릭 캡쳐'
+          동영상 핵심 장면을 1초 만에 <br /> 내 것으로 만드는 &#39;원클릭
+          캡쳐&#39;
         </h3>
         <h4 className="text-md px-4 pt-5 pb-5 ">
           클릭 한번으로 원하는 부분을 캡쳐하고, 캡쳐에 바로 메모까지!
@@ -64,13 +65,13 @@ function Instruction() {
           <i>
             <IoMdBrowsers />
           </i>
-          <a>웹 익스텐션</a>
+          <span>웹 익스텐션</span>
         </div>
         <div className="flex items-center space-x-2 py-5 px-3 bg-white drop-shadow-md rounded-lg text-md font-semibold">
           <i>
             <BiLaptop />
           </i>
-          <a>데스크톱용 앱</a>
+          <span>데스크톱용 앱</span>
         </div>
       </button>
 

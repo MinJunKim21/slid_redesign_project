@@ -29,12 +29,12 @@ export default function Hero() {
         </h3>
       </div>
       <button className="flex justify-center space-x-3 mx-auto mt-10">
-        <a className="text-white bg-[#2e90ff] rounded-lg py-4 px-7 hover:bg-blue-500">
+        <span className="text-white bg-[#2e90ff] rounded-lg py-4 px-7 hover:bg-blue-500">
           무료 플랜 시작하기
-        </a>
-        <a className="border border-black rounded-lg py-3.5 px-7 cursor-pointer hover:bg-slate-200 font-bold">
+        </span>
+        <span className="border border-black rounded-lg py-3.5 px-7 cursor-pointer hover:bg-slate-200 font-bold">
           가입 없이 체험하기
-        </a>
+        </span>
       </button>
     </div>
   );

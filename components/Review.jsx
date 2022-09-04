@@ -20,32 +20,32 @@ function Review() {
       </div>
 
       <Link href="https://blog.naver.com/raon2029/222173426676">
-        <a>
+        <div>
           <h6>처음 에버노트를 만났을 때의 그런 느낌이랄까...</h6>
           <span>슬리드는 온라인 강의에 특화된 편집 툴</span>
           <span>[온라인 수업 강의 필수품:slid] 요물이로다...!</span>
-        </a>
+        </div>
       </Link>
       <Link href="https://blog.naver.com/raon2029/222173426676">
-        <a>
+        <div>
           <h6>처음 에버노트를 만났을 때의 그런 느낌이랄까...</h6>
           <span>슬리드는 온라인 강의에 특화된 편집 툴</span>
           <span>[온라인 수업 강의 필수품:slid] 요물이로다...!</span>
-        </a>
+        </div>
       </Link>
       <Link href="https://blog.naver.com/raon2029/222173426676">
-        <a>
+        <div>
           <h6>처음 에버노트를 만났을 때의 그런 느낌이랄까...</h6>
           <span>슬리드는 온라인 강의에 특화된 편집 툴</span>
           <span>[온라인 수업 강의 필수품:slid] 요물이로다...!</span>
-        </a>
+        </div>
       </Link>
       <Link href="https://blog.naver.com/raon2029/222173426676">
-        <a>
+        <div>
           <h6>처음 에버노트를 만났을 때의 그런 느낌이랄까...</h6>
           <span>슬리드는 온라인 강의에 특화된 편집 툴</span>
           <span>[온라인 수업 강의 필수품:slid] 요물이로다...!</span>
-        </a>
+        </div>
       </Link>
     </div>
   );
