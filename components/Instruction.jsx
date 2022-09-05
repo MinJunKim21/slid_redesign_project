@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BsCheck2 } from 'react-icons/bs';
+import { HiCheck } from 'react-icons/hi';
 import { AiOutlineRight } from 'react-icons/ai';
 import { IoMdBrowsers } from 'react-icons/io';
 import { BiLaptop } from 'react-icons/bi';
@@ -79,39 +79,46 @@ function Instruction() {
         <h2 className="font-semibold text-2xl mt-10 px-4 text-center ">
           이렇게나 간편한 공부
         </h2>
-        <h5 className="text-center text-md font-light text-gray-600 mt-7">
+        <h5 className="text-center text-md font-semibold text-gray-400 mt-7">
           가장 효율적인 공부 방법, 브라우저에서 만나는 슬리드
         </h5>
-        <div className="flex items-center space-x-2 justify-center text-sm font-normal ">
-          <i>
-            <BsCheck2 />
-          </i>
-          <span>설치 없이 브라우저에 추가해 간편하게 쓸 수 있어요.</span>
+        <div className="px-7 mt-7 space-y-5 font-light justify-start">
+          <div className="flex items-center space-x-2  text-sm font-normal ">
+            <i className="text-[#1981f8] font-bold text-lg">
+              <HiCheck />
+            </i>
+            <span className="font-normal">
+              설치 없이 브라우저에 추가해 간편하게 쓸 수 있어요.
+            </span>
+          </div>
+          <div className="flex items-center space-x-2 justify-center text-sm font-normal ">
+            <i className="text-[#1981f8] font-bold text-lg">
+              <HiCheck />
+            </i>
+            <span>
+              캡쳐와 동시에 구간 북마크까지, 공부에 꼭 필요한 유용한 기능들만
+              모아뒀어요.
+            </span>
+          </div>
         </div>
-        <div className="flex items-center space-x-2 justify-center text-sm font-normal ">
-          <i>
-            <BsCheck2 />
-          </i>
-          <span>
-            캡쳐와 동시에 구간 북마크까지, 공부에 꼭 필요한 유용한 기능들만
-            모아뒀어요.
+        <button className="flex items-center space-x-1 justify-center mx-auto mt-7">
+          <span className="text-[#1981f8] text-sm font-semibold">
+            Chrome에 무료로 추가하기
           </span>
-        </div>
-
-        <button>
-          <span>Chrome에 무료로 추가하기</span>
           <i>
-            <AiOutlineRight />
+            <AiOutlineRight className="text-[#1981f8] text-sm" />
           </i>
         </button>
-        <Image
-          src="https://www.slid.cc/_next/image?url=%2Fsrc%2Fdesign%2Fassets%2Fslid_landing_extension_platform.png&w=640&q=75"
-          // layout="fill"
-          height={455}
-          width={635}
-          objectFit="contain"
-          alt=""
-        />
+        <div className="mt-7 flex justify-center mx-4">
+          <Image
+            src="https://www.slid.cc/_next/image?url=%2Fsrc%2Fdesign%2Fassets%2Fslid_landing_extension_platform.png&w=640&q=75"
+            // layout="fill"
+            height={455}
+            width={635}
+            objectFit="contain"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
