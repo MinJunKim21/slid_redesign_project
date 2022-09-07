@@ -9,7 +9,7 @@ function Footer() {
         <span> |&nbsp; </span>
         <span>이용 약관</span>
       </div>
-      <div className="flex flex-wrap pt-2 text-[4px] text-gray-400">
+      <div className="flex flex-wrap pt-2 text-xs text-gray-400">
         <span>주식회사 비브리지&nbsp;</span>
         <span> |&nbsp; </span>
         <span>사업자 등록번호 380-81-01791&nbsp; </span>

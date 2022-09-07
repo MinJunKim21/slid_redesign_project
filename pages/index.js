@@ -8,6 +8,7 @@ import DownloadVersion from '../components/DownloadVersion';
 import Partners from '../components/Partners';
 import TryPlan from '../components/TryPlan';
 import Footer from '../components/Footer';
+import HelpPopup from '../components/HelpPopup';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <DownloadVersion />
         <Partners />
         <TryPlan />
+        <HelpPopup />
       </main>
 
       <footer>
