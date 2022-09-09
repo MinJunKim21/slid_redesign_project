@@ -10,7 +10,7 @@ function MessageModal() {
   };
 
   return (
-    <div open={showModal} onClose={handleClose}>
+    <div open={true} onClose={handleClose}>
       <div className="fixed top-0 z-50 bg-black bg-opacity-70 w-screen h-screen">
         bg
       </div>

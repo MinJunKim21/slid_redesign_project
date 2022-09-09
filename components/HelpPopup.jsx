@@ -7,11 +7,6 @@ import { useRecoilState } from 'recoil';
 function HelpPopup() {
   const [showModal, setShowModal] = useRecoilState(modalState);
 
-  const openModal = () => {
-    setShowModal(true);
-    console.log('hi');
-  };
-
   return (
     <div className="relative">
       <button
@@ -25,7 +20,6 @@ function HelpPopup() {
           1
         </div>
       </button>
-      {showModal && <MessageModal />}
     </div>
   );
 }

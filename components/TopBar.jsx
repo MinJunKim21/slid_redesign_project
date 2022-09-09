@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 function TopBar() {
   return (
@@ -11,16 +12,18 @@ function TopBar() {
           width={100}
           alt=""
         />
+
         <div className="text-xs font-semibold space-x-2">
-          <span className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
-            로그인
-          </span>
-          <span
-            href="/signup"
-            className="text-white bg-[#2e90ff] rounded-lg py-2 px-3 hover:bg-blue-500"
-          >
-            무료 플랜 시작하기
-          </span>
+          <Link href="/signup">
+            <span className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
+              로그인
+            </span>
+          </Link>
+          <Link href="/signup">
+            <span className="text-white bg-[#2e90ff] rounded-lg py-2 px-3 hover:bg-blue-500">
+              무료 플랜 시작하기
+            </span>
+          </Link>
         </div>
       </div>
     </div>

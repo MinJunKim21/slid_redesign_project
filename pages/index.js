@@ -9,8 +9,14 @@ import Partners from '../components/Partners';
 import TryPlan from '../components/TryPlan';
 import Footer from '../components/Footer';
 import HelpPopup from '../components/HelpPopup';
+import { modalState } from '../atoms/modalAtom';
+import { useRecoilState } from 'recoil';
+import MessageModal from '../components/MessageModal';
 
 export default function Home() {
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  console.log(showModal);
+
   return (
     <div>
       <Head>
@@ -32,6 +38,7 @@ export default function Home() {
         <Partners />
         <TryPlan />
         <HelpPopup />
+        {showModal === true ? <MessageModal /> : <></>}
       </main>
 
       <footer>
