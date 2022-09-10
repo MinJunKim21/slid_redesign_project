@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { GoPlus } from 'react-icons/go';
+import { AiOutlineRight } from 'react-icons/ai';
 
 function ReviewOne({ mentOne, mentTwo, mentThree, webLink }) {
   return (
@@ -16,10 +16,10 @@ function ReviewOne({ mentOne, mentTwo, mentThree, webLink }) {
             <span className="text-xs text-gray-500 flex justify-end mb-2">
               {mentThree}
             </span>
-            <div className="flex items-center space-x-1 text-gray-500 text-xs justify-end">
-              <span>자세히 보기</span>
+            <div className="flex items-center space-x-1 text-gray-700 text-xs justify-end font-semibold">
+              <span className="">블로그 후기 자세히 보기</span>
               <i>
-                <GoPlus />
+                <AiOutlineRight />
               </i>
             </div>
           </div>

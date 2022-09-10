@@ -14,7 +14,7 @@ function TopBar() {
         />
 
         <div className="text-xs font-semibold space-x-2">
-          <Link href="/signup">
+          <Link href="/signin">
             <span className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
               로그인
             </span>
