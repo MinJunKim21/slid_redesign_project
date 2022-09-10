@@ -14,7 +14,7 @@ function MessageModal() {
   };
 
   return (
-    <div open={true} close={handleClose}>
+    <div open={true}>
       <div className="fixed top-0 z-50 bg-black bg-opacity-70 w-screen h-screen"></div>
       <div className="bg-[#f2f2f2] w-50 h-50 fixed top-0 left-0 mt-12 z-50 w-full h-full rounded-t-[30px]">
         <div className="px-6 pt-2">
@@ -26,7 +26,7 @@ function MessageModal() {
               width={80}
               alt=""
             />
-            <div onClick={handleClose}>
+            <div onClick={handleClose} className="cursor-pointer">
               <i>
                 <GrClose />
               </i>
