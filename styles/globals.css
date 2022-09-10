@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .price-list {
+    @apply text-[#828282] space-x-1 flex items-center;
+  }
+}
