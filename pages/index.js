@@ -15,7 +15,6 @@ import MessageModal from '../components/MessageModal';
 
 export default function Home() {
   const [showModal, setShowModal] = useRecoilState(modalState);
-  console.log(showModal);
 
   return (
     <div>

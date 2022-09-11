@@ -4,6 +4,6 @@
 
 @layer components {
   .price-list {
-    @apply text-[#828282] space-x-1 flex items-center;
+    @apply text-[#969696] space-x-2 font-normal flex items-center;
   }
 }
