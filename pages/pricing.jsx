@@ -1,8 +1,21 @@
 import TopBar from '../components/TopBar';
 import { HiCheck } from 'react-icons/hi';
 import Image from 'next/image';
+import { useState } from 'react';
 
 function pricing() {
+  const [isMoved, setIsMoved] = useState(false);
+  const moveButtonRight = () => {
+    if (isMoved === false) {
+      setIsMoved(true);
+    }
+  };
+  const moveButtonLeft = () => {
+    if (isMoved === true) {
+      setIsMoved(false);
+    }
+  };
+
   return (
     <div className="max-w-xl px-4  pt-2">
       <div className="flex justify-between">
@@ -32,13 +45,28 @@ function pricing() {
         </h5>
       </div>
 
-      <div className="mt-4 bg-gray-200 rounded-md flex justify-around py-2 px-2">
-        <button className="bg-white flex w-full rounded-md py-1 ">
-          <span>12개월 회원권</span>
-        </button>
-        <button>
-          <span>1개월 회원권</span>
-        </button>
+      <div className="bg-gray-200 rounded-md p-1 mt-4">
+        <div className=" relative bg-gray-200 rounded-md flex justify-around p-2">
+          <div
+            className={`bg-white absolute left-0 top-0 h-full p-2 x w-[50%] rounded-md py-1 ${
+              isMoved
+                ? 'translate-x-[100%]  ease-out duration-300'
+                : 'translate-x-[0%] ease-out duration-300'
+            } `}
+          ></div>
+          <button
+            onClick={() => moveButtonLeft()}
+            className="flex w-full rounded-md py-1 z-50"
+          >
+            <span className="mx-auto ">12개월 회원권</span>
+          </button>
+          <button
+            onClick={() => moveButtonRight()}
+            className="flex w-full rounded-md py-1 z-50 "
+          >
+            <span className="mx-auto ">1개월 회원권</span>
+          </button>
+        </div>
       </div>
 
       <div>
