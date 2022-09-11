@@ -7,7 +7,7 @@ import MessageModal from '../components/MessageModal';
 import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
 
-function pricing() {
+function Pricing() {
   const [showModal, setShowModal] = useRecoilState(modalState);
 
   const [isMoved, setIsMoved] = useState(false);
@@ -259,4 +259,4 @@ function pricing() {
   );
 }
 
-export default pricing;
+export default Pricing;
