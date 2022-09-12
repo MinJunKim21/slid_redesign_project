@@ -1,8 +1,31 @@
 import Image from 'next/image';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillApple } from 'react-icons/ai';
+import { useState } from 'react';
+import { auth } from '../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { useForm } from 'react-hook-form';
+import useAuth from '../hooks/useAuth';
 
 function signup() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const [login, setLogin] = useState(false);
+  const { signIn, signUp } = useAuth();
+
+  const onSubmit = async ({ nickname, email, password }) => {
+    if (login) {
+      await signIn(email, password);
+    } else {
+      await signUp(nickname, email, password);
+      console.log(email);
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center mx-16 mt-20 max-w-xl ">
       <div className="justify-center mx-auto">
@@ -27,18 +50,20 @@ function signup() {
         <hr className="border-1 border-gray-600 flex flex-grow opacity-30" />
       </div>
 
-      <form className="flex flex-col ">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col ">
         <label className="mt-4">닉네임</label>
         <input
           type="text"
           placeholder="Sliddy"
           className="border-[1px] border-gray-300 rounded-md p-1 px-3 mt-2"
+          {...register('nickname', { required: true })}
         />
         <label className="mt-4">이메일</label>
         <input
           type="email"
           placeholder="hello@slid.cc"
           className="border-[2px] rounded-md p-1 px-3 mt-2"
+          {...register('email', { required: true })}
         />
         <span className="text-xs text-gray-500 mt-1">
           해당 이메일로 확인 코드가 발송됩니다.
@@ -48,6 +73,7 @@ function signup() {
           type="password"
           placeholder=""
           className="border-[2px] rounded-md p-1 px-3 mt-2"
+          {...register('password', { required: true })}
         />
         <span className="text-xs text-gray-500 mt-1">
           8자 이상의 비밀번호를 입력해주세요.

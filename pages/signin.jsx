@@ -2,8 +2,28 @@ import Image from 'next/image';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillApple } from 'react-icons/ai';
 import Link from 'next/link';
+import { useState } from 'react';
+import useAuth from '../hooks/useAuth';
+import { useForm } from 'react-hook-form';
 
 function signin() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const [login, setLogin] = useState(false);
+  const { signIn, signUp } = useAuth();
+
+  const onSubmit = async ({ email, password }) => {
+    if (login) {
+      await signIn(email, password);
+    } else {
+      await signUp(email, password);
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center mx-16 mt-20 max-w-xl ">
       <div className="justify-center mx-auto">
@@ -34,18 +54,24 @@ function signin() {
         <hr className="border-1 border-gray-600 flex flex-grow opacity-30" />
       </div>
 
-      <form className="flex flex-col ">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col ">
         <label className="mt-4">이메일</label>
         <input
           type="email"
           placeholder="hello@slid.cc"
           className="border-[2px] rounded-md p-1 px-3 mt-2"
+          {...register('email', { required: true })}
         />
+        {errors.email && <p>이메일을 입력해주세요.</p>}
+
         <label className="mt-4">비밀번호</label>
         <input
           type="password"
           className="border-[2px] rounded-md p-1 px-3 mt-2"
+          {...register('password', { required: true })}
         />
+        {errors.password && <span>비밀번호를 입력해주세요.</span>}
+
         <button
           type="submit"
           className="bg-blue-500 rounded-md text-lg font-semibold text-white mt-8 py-2 px-4"

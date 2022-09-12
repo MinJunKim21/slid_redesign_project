@@ -1,11 +1,14 @@
 import '../styles/globals.css';
 import { RecoilRoot } from 'recoil';
+import { AuthProvider } from '../hooks/useAuth';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <AuthProvider>
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </AuthProvider>
   );
 }
 
