@@ -7,7 +7,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import useAuth from '../hooks/useAuth';
 
-function signup() {
+function Signup() {
   const {
     register,
     handleSubmit,
@@ -102,4 +102,4 @@ function signup() {
   );
 }
 
-export default signup;
+export default Signup;

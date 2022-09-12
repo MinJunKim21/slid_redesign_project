@@ -6,7 +6,7 @@ import { useState } from 'react';
 import useAuth from '../hooks/useAuth';
 import { useForm } from 'react-hook-form';
 
-function signin() {
+function Signin() {
   const {
     register,
     handleSubmit,
@@ -94,4 +94,4 @@ function signin() {
   );
 }
 
-export default signin;
+export default Signin;
