@@ -6,6 +6,7 @@ import HelpPopup from '../components/HelpPopup';
 import MessageModal from '../components/MessageModal';
 import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
+import Link from 'next/link';
 
 function Pricing() {
   const [showModal, setShowModal] = useRecoilState(modalState);
@@ -25,14 +26,16 @@ function Pricing() {
   return (
     <div className="max-w-xl px-4 pt-2 mb-20">
       <div className="flex justify-between">
-        <div className="">
-          <Image
-            src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
-            layout="fixed"
-            height={40}
-            width={80}
-            alt=""
-          />
+        <div className="cursor-pointer">
+          <Link href="/">
+            <Image
+              src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
+              layout="fixed"
+              height={40}
+              width={80}
+              alt=""
+            />
+          </Link>
         </div>
         <button>
           <span className="text-sm font-semibold border border-black rounded-lg px-3 py-2 hover:bg-gray-200">

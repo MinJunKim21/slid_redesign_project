@@ -2,7 +2,7 @@ import useAuth from '../hooks/useAuth';
 import { VscChevronLeft } from 'react-icons/vsc';
 import Link from 'next/link';
 
-function account() {
+function Account() {
   const { user } = useAuth();
 
   return (
@@ -34,4 +34,4 @@ function account() {
   );
 }
 
-export default account;
+export default Account;
