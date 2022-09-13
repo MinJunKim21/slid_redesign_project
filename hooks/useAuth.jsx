@@ -17,6 +17,7 @@ const AuthContext = createContext({
   logout: async () => {},
   error: null,
   loading: false,
+  nickName: null,
 });
 
 export const AuthProvider = ({ children }) => {
@@ -25,6 +26,7 @@ export const AuthProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const router = useRouter();
   const [initialLoading, setInitialLoading] = useState(true);
+  const [nickName, setNickName] = useState(null);
 
   useEffect(
     () =>
@@ -33,30 +35,30 @@ export const AuthProvider = ({ children }) => {
           //logged in
           setUser(user);
           setLoading(false);
+          // setNickName(nickName);
         } else {
           //not logged in
           setUser(null);
           setLoading(true);
           router.push('/');
+          // setNickName(null);
         }
         setInitialLoading(false);
       }),
     [auth]
   );
-  console.log(auth);
-  console.log(user);
-  const signUp = async (email, password) => {
+  const signUp = async (displayName, email, password) => {
     setLoading(true);
     await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setUser(userCredential.user);
+        setNickName(displayName);
         router.push('/');
         setLoading(false);
       })
       .catch((error) => alert(error.message))
       .finally(() => setLoading(false));
   };
-
   const signIn = async (email, password) => {
     setLoading(true);
     await signInWithEmailAndPassword(auth, email, password)
@@ -75,6 +77,7 @@ export const AuthProvider = ({ children }) => {
       .then(() => {
         setUser(null);
         router.push('/');
+        setNickName(null);
       })
       .catch((error) => alert(error.message))
       .finally(() => setLoading(false));
@@ -88,6 +91,7 @@ export const AuthProvider = ({ children }) => {
       error,
       loading,
       logout,
+      nickName,
     }),
     [user, loading]
   );

@@ -9,14 +9,16 @@ function TopBar() {
     <div>
       {user ? (
         <div className="fixed pt-2 px-4 mb-5 z-50 bg-white w-full">
-          <div className="flex items-center justify-between">
-            <Image
-              src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
-              layout="fixed"
-              height={50}
-              width={100}
-              alt=""
-            />
+          <div className="flex items-center justify-between cursor-pointer">
+            <Link href="/">
+              <Image
+                src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
+                layout="fixed"
+                height={50}
+                width={100}
+                alt=""
+              />
+            </Link>
 
             <div className="text-xs font-semibold space-x-2">
               <Link href="/pricing">
@@ -34,14 +36,16 @@ function TopBar() {
         </div>
       ) : (
         <div className="fixed pt-2 px-4 mb-5 z-50 bg-white w-full">
-          <div className="flex items-center justify-between">
-            <Image
-              src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
-              layout="fixed"
-              height={50}
-              width={100}
-              alt=""
-            />
+          <div className="flex items-center justify-between cursor-pointer">
+            <Link href="/">
+              <Image
+                src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
+                layout="fixed"
+                height={50}
+                width={100}
+                alt=""
+              />
+            </Link>
 
             <div className="text-xs font-semibold space-x-2">
               <Link href="/signin">

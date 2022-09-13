@@ -24,11 +24,11 @@ function Signup() {
   const [login, setLogin] = useState(false);
   const { signIn, signUp } = useAuth();
 
-  const onSubmit = async ({ email, password }) => {
+  const onSubmit = async ({ displayName, email, password }) => {
     if (login) {
       await signIn(email, password);
     } else {
-      await signUp(email, password);
+      await signUp(displayName, email, password);
     }
   };
 
@@ -62,7 +62,7 @@ function Signup() {
           type="text"
           placeholder="Sliddy"
           className="border-[1px] border-gray-300 rounded-md p-1 px-3 mt-2"
-          {...register('nickname', { required: true })}
+          {...register('displayName', { required: true })}
         />
         <label className="mt-4">이메일</label>
         <input

@@ -15,14 +15,16 @@ function Instruction() {
         <h4 className="text-md px-4 pt-5 pb-5 ">
           클릭 한번으로 원하는 부분을 캡쳐하고, 캡쳐에 바로 메모까지!
         </h4>
-        <Image
-          src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_one_click_capture.1c2c71eb.png&w=1080&q=75"
-          // layout="fill"
-          height={455}
-          width={635}
-          objectFit="contain"
-          alt=""
-        />
+        <div className="px-4 mx-auto">
+          <Image
+            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_one_click_capture.1c2c71eb.png&w=1080&q=75"
+            // layout="fill"
+            height={455}
+            width={635}
+            objectFit="contain"
+            alt=""
+          />
+        </div>
       </div>
 
       <div>
@@ -32,14 +34,16 @@ function Instruction() {
         <h4 className="text-md px-4 pt-5 pb-5  text-right">
           내 노트함에 자동 저장되어, 모바일/태블릿에서 언제든지 복습가능
         </h4>
-        <Image
-          src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_my_docs.2662558d.png&w=640&q=75"
-          // layout="fill"
-          height={455}
-          width={635}
-          objectFit="contain"
-          alt=""
-        />
+        <div className="px-4 mx-auto">
+          <Image
+            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_my_docs.2662558d.png&w=640&q=75"
+            // layout="fill"
+            height={455}
+            width={635}
+            objectFit="contain"
+            alt=""
+          />
+        </div>
       </div>
 
       <div>
@@ -50,14 +54,16 @@ function Instruction() {
           작성한 노트를 다양한 포맷으로 공유해보세요. (PDF, 워드, 이미지, 노션
           지원)
         </h4>
-        <Image
-          src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_share_and_export.0dcf07f4.png&w=640&q=75"
-          // layout="fill"
-          height={455}
-          width={635}
-          objectFit="contain"
-          alt=""
-        />
+        <div className="px-4 mx-auto">
+          <Image
+            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_share_and_export.0dcf07f4.png&w=640&q=75"
+            // layout="fill"
+            height={455}
+            width={635}
+            objectFit="contain"
+            alt=""
+          />
+        </div>
       </div>
 
       <button className="flex justify-center mx-auto space-x-5 mt-20">

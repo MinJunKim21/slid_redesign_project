@@ -18,9 +18,6 @@ import useAuth from '../hooks/useAuth';
 export default function Home() {
   const [showModal, setShowModal] = useRecoilState(modalState);
   const { user } = useAuth();
-  if (user) {
-    console.log('logged in');
-  }
 
   return (
     <div>
