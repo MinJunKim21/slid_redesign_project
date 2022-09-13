@@ -6,8 +6,15 @@ import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import useAuth from '../hooks/useAuth';
+import { useRouter } from 'next/router';
 
 function Signup() {
+  const router = useRouter();
+  const { user } = useAuth();
+  if (user) {
+    router.push('/');
+  }
+
   const {
     register,
     handleSubmit,
@@ -17,12 +24,11 @@ function Signup() {
   const [login, setLogin] = useState(false);
   const { signIn, signUp } = useAuth();
 
-  const onSubmit = async ({ nickname, email, password }) => {
+  const onSubmit = async ({ email, password }) => {
     if (login) {
       await signIn(email, password);
     } else {
-      await signUp(nickname, email, password);
-      console.log(email);
+      await signUp(email, password);
     }
   };
 

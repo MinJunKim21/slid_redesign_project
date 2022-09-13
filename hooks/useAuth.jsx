@@ -37,13 +37,14 @@ export const AuthProvider = ({ children }) => {
           //not logged in
           setUser(null);
           setLoading(true);
-          router.push('/signin');
+          router.push('/');
         }
         setInitialLoading(false);
       }),
     [auth]
   );
-
+  console.log(auth);
+  console.log(user);
   const signUp = async (email, password) => {
     setLoading(true);
     await createUserWithEmailAndPassword(auth, email, password)
@@ -73,6 +74,7 @@ export const AuthProvider = ({ children }) => {
     signOut(auth)
       .then(() => {
         setUser(null);
+        router.push('/');
       })
       .catch((error) => alert(error.message))
       .finally(() => setLoading(false));

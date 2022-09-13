@@ -5,8 +5,15 @@ import Link from 'next/link';
 import { useState } from 'react';
 import useAuth from '../hooks/useAuth';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
 
 function Signin() {
+  const router = useRouter();
+  const { user } = useAuth();
+  if (user) {
+    router.push('/');
+  }
+
   const {
     register,
     handleSubmit,
@@ -17,10 +24,8 @@ function Signin() {
   const { signIn, signUp } = useAuth();
 
   const onSubmit = async ({ email, password }) => {
-    if (login) {
+    if (login === false) {
       await signIn(email, password);
-    } else {
-      await signUp(email, password);
     }
   };
 

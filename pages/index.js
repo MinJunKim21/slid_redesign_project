@@ -12,9 +12,15 @@ import HelpPopup from '../components/HelpPopup';
 import { modalState } from '../atoms/modalAtom';
 import { useRecoilState } from 'recoil';
 import MessageModal from '../components/MessageModal';
+import { auth } from '../firebase';
+import useAuth from '../hooks/useAuth';
 
 export default function Home() {
   const [showModal, setShowModal] = useRecoilState(modalState);
+  const { user } = useAuth();
+  if (user) {
+    console.log('logged in');
+  }
 
   return (
     <div>
