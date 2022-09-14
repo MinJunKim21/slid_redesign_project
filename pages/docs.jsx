@@ -1,5 +1,5 @@
 import useAuth from '../hooks/useAuth';
-import { CgMenu } from 'react-icons/Cg';
+import { CgMenu } from 'react-icons/cg';
 import LoggedInMenu from '../components/LoggedInMenu';
 import { useRecoilState } from 'recoil';
 import { menuModalState } from '../atoms/modalAtom';
