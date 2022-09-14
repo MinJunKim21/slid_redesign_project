@@ -1,5 +1,6 @@
 import useAuth from '../hooks/useAuth';
 import { CgMenu } from 'react-icons/cg';
+import { AiOutlinePlus } from 'react-icons/ai';
 import LoggedInMenu from '../components/LoggedInMenu';
 import { useRecoilState } from 'recoil';
 import { menuModalState } from '../atoms/modalAtom';
@@ -30,26 +31,36 @@ function Docs() {
         </button> */}
         <input
           type="text"
-          placeholder="🔎제목 또는 내용을 검색하세요."
-          className="p-2 w-full shadow-md rounded-full"
+          placeholder="🔎 제목 또는 내용을 검색하세요."
+          className="px-5 py-3 w-full shadow-md rounded-full"
         />
       </div>
       {/* <div onClick={logout}>logout</div> */}
       <div className="px-10 pt-10">
         <h3 className="font-bold">내 노트함</h3>
-        <h4>
-          Folders <span>0</span>
+        <div className="flex justify-between">
+          <h4>
+            Folders <span className="text-[#1981f8]">0</span>
+          </h4>
+          <select className="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2">
+            <option value="0">생성일순</option>
+            <option value="1">이름순</option>
+            <option value="2">최종 수정일순</option>
+          </select>
+        </div>
+        <button className="mt-6 w-full flex border rounded-lg border-gray-300 text-sm p-4">
+          <div className="flex items-center justify-center mx-auto space-x-2 text-gray-500">
+            <i>
+              <AiOutlinePlus />
+            </i>
+            <span>새 폴더 만들기</span>
+          </div>
+        </button>
+        <h4 className="mt-8">
+          Notes <span className="text-[#1981f8]">5</span>
         </h4>
-        <select name="" id="">
-          <option value="0">생성일순</option>
-          <option value="1">이름순</option>
-          <option value="2">최종 수정일순</option>
-        </select>
-        <button>새 폴더 만들기</button>
-        <h4>
-          Notes <span>5</span>
-        </h4>
-        {showMenu === true ? <LoggedInMenu /> : <></>}
+        <div></div>
+        {/* {showMenu === true ? <LoggedInMenu /> : <></>} */}
       </div>
     </div>
   );
