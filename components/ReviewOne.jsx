@@ -3,7 +3,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 function ReviewOne({ mentOne, mentTwo, mentThree, webLink }) {
   return (
-    <div>
+    <div className="sm:p-2 cursor-pointer">
       <Link href={`${webLink}`}>
         <div className="bg-[#e8f3ff] rounded-xl py-4 px-5 flex flex-col w-[330px] h-[170px] justify-between">
           <div>

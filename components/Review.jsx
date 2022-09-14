@@ -6,9 +6,11 @@ import ReviewOne from './ReviewOne';
 function Review() {
   return (
     <div>
-      <h3 className="flex flex-col space-y-1 justify-center mx-auto text-2xl text-center font-bold mt-7 px-10">
-        <span>1만 명의 온라인 학습자들이</span>
-        <span>슬리드로 공부하고 있어요.</span>
+      <h3 className="flex flex-col space-y-1 justify-center mx-auto text-xl text-center font-bold mt-16 px-10 lg:text-2xl">
+        <span>
+          1만 명의 온라인 학습자들이 <br className="md:hidden" />
+          슬리드로 공부하고 있어요.
+        </span>
       </h3>
       <div className="flex justify-center mx-auto space-x-3 mt-5 text-lg">
         <h5>Chrome Ratings</h5>
@@ -23,7 +25,7 @@ function Review() {
           <span className="text-[#1981f8] text-md font-bold">4.7</span>
         </div>
       </div>
-      <div className="mt-10 mx-4 flex overflow-scroll scrollbar-hide space-x-3 ">
+      <div className="mt-10 mx-4 flex overflow-scroll scrollbar-hide space-x-3 sm:flex sm:flex-wrap sm:mx-auto sm:justify-center sm:space-x-0">
         <ReviewOne
           mentOne="처음 에버노트를 만났을 때의 그런 느낌이랄까..."
           mentTwo="슬리드는 온라인 강의에 특화된 편집 툴"

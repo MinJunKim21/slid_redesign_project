@@ -5,6 +5,9 @@ import LoggedInMenu from '../components/LoggedInMenu';
 import { useRecoilState } from 'recoil';
 import { menuModalState } from '../atoms/modalAtom';
 import Link from 'next/link';
+import HelpPopup from '../components/HelpPopup';
+import { modalState } from '../atoms/modalAtom';
+import MessageModal from '../components/MessageModal';
 
 function Docs() {
   const { user } = useAuth();
@@ -12,6 +15,7 @@ function Docs() {
   const { nickName } = useAuth();
   // user.displayName = { nickName };
   const [showMenu, setShowMenu] = useRecoilState(menuModalState);
+  const [showModal, setShowModal] = useRecoilState(modalState);
 
   return (
     <div className="mx-w-xl">
@@ -59,7 +63,16 @@ function Docs() {
         <h4 className="mt-8">
           Notes <span className="text-[#1981f8]">5</span>
         </h4>
-        <div></div>
+        <div className="flex flex-col  border rounded-lg w-full h-[250px] relative">
+          <div className="h-[130px]">picture</div>
+          <p className="px-4 text-xs">you can note something here </p>
+          <span className="absolute p-4 text-xs text-gray-400 left-0 bottom-0">
+            2022.09.12
+          </span>
+        </div>
+
+        <HelpPopup />
+        {showModal === true ? <MessageModal /> : <></>}
         {/* {showMenu === true ? <LoggedInMenu /> : <></>} */}
       </div>
     </div>
