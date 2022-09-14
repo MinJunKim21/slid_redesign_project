@@ -4,16 +4,16 @@ import Link from 'next/link';
 function Partners() {
   return (
     <div>
-      <h3 className="font-bold text-center mx-auto text-2xl mt-16 mb-5">
+      <h3 className="font-bold text-center mx-auto text-2xl mt-16 mb-5 lg:text-3xl">
         PARTNERS
       </h3>
-      <h4 className="text-lg px-4 text-center">
+      <h4 className="text-lg px-4 text-center lg:text-xl">
         새로운 온라인 학습 환경을 만드는 슬리드의 비전에 함께 해주시는
         분들입니다.
       </h4>
 
-      <div className="flex flex-col space-y-3 mt-5 px-4 py-5">
-        <div className="flex space-x-5">
+      <div className="flex flex-col space-y-3 mt-5 px-4 py-5 lg:space-y-7">
+        <div className="flex space-x-5 mx-auto lg:space-x-16">
           <div>
             <Link href="http://www.mashupangels.com/?ref=slid">
               <Image
@@ -39,7 +39,7 @@ function Partners() {
             </Link>
           </div>
         </div>
-        <div className="flex space-x-5">
+        <div className="flex space-x-5 mx-auto lg:space-x-16">
           <div>
             <Link href="https://front1.kr/">
               <Image

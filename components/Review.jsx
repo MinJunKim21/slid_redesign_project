@@ -5,8 +5,8 @@ import ReviewOne from './ReviewOne';
 
 function Review() {
   return (
-    <div>
-      <h3 className="flex flex-col space-y-1 justify-center mx-auto text-xl text-center font-bold mt-16 px-10 lg:text-2xl">
+    <div className=" mx-auto">
+      <h3 className="flex flex-col space-y-1 justify-center mx-auto text-xl text-center font-bold mt-20 px-10 lg:text-2xl">
         <span>
           1만 명의 온라인 학습자들이 <br className="md:hidden" />
           슬리드로 공부하고 있어요.

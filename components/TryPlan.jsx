@@ -1,11 +1,11 @@
 function TryPlan() {
   return (
     <div className="bg-[#eef6ff] pt-16 pb-14">
-      <h3 className="font-bold text-2xl text-center">
+      <h3 className="font-bold text-2xl text-center md:text-3xl">
         똑똑하게 온라인 강의를
-        <br /> 공부하는 방법, 슬리드
+        <br className="md:hidden" /> 공부하는 방법, 슬리드
       </h3>
-      <h4 className="pt-5 text-center text-gray-400">
+      <h4 className="pt-5 text-center text-gray-400 md:text-lg">
         Chrome 확장자를 설치해, 무료로 시작할 수 있습니다.
       </h4>
 

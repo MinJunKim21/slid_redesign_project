@@ -3,7 +3,7 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 export default function Hero() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="pt-[60px] pl-2 md:flex md:flex-row-reverse items-center ">
         <div className="flex justify-center ml-3 mx-auto">
           <Image
@@ -17,15 +17,14 @@ export default function Hero() {
         </div>
 
         <div className="min-w-[280px] space-y-6 mx-auto justify-center">
-          <div className="space-y-2 py-4">
-            <h1 className="text-3xl font-semibold text-center">
+          <div className="space-y-2 py-4 md:ml-4 lg:ml-6">
+            <h1 className="text-2xl font-semibold text-center md:text-left lg:text-3xl">
               영상 속 지식이
-            </h1>
-            <h1 className="text-3xl font-semibold text-center">
+              <br />
               클릭만 하면 내 것으로
             </h1>
           </div>
-          <h3 className="text-lg text-center flex flex-col">
+          <h3 className="text-md text-center flex flex-col md:text-left md:ml-4  lg:ml-6 lg:text-lg">
             <span>
               슬리드만의 <b>쉽고 빠른 캡쳐 필기</b>로
             </span>

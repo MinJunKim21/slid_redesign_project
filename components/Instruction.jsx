@@ -9,7 +9,7 @@ function Instruction() {
   const [leftClicked, setLeftClicked] = useState(true);
 
   return (
-    <div>
+    <div className="lg:max-w-7xl mx-auto">
       <div className="md:flex md:mt-10 md:items-center md:mt-20 ">
         <div className="mx-auto justify-center">
           <h3 className="font-semibold text-lg mt-20 px-4 md:text-xl ">
