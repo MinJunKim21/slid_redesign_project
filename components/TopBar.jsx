@@ -61,7 +61,17 @@ function TopBar() {
               />
             </Link>
 
-            <div className="text-xs font-semibold space-x-2">
+            <div className="text-xs items-center flex font-semibold space-x-2 sm:space-x-4 sm:text-sm lg:text-base ">
+              <div className=" hidden sm:flex text-gray-600  ">
+                <Link href="https://www.slid.cc/en">
+                  <div className="flex items-center space-x-2  group">
+                    <HiOutlineGlobeAlt className="lg:text-2xl md:text-xl" />
+                    <span className="hidden group-hover:flex group-hover:text-lg font-normal ">
+                      Eng
+                    </span>
+                  </div>
+                </Link>
+              </div>
               <Link href="/signin">
                 <span className="border border-black rounded-lg py-1.5 px-3 cursor-pointer hover:bg-slate-200">
                   로그인

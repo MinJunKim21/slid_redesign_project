@@ -72,7 +72,7 @@ function Signup() {
           {...register('email', { required: true })}
         />
         <span className="text-xs text-gray-500 mt-1">
-          해당 이메일로 확인 코드가 발송됩니다.
+          테스트용 임시 이메일을 사용해주세요.
         </span>
         <label className="mt-4">비밀번호</label>
         <input
