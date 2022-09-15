@@ -30,7 +30,7 @@ function Signin() {
   };
 
   return (
-    <div className="flex flex-col justify-center mx-16 mt-20 max-w-xl ">
+    <div className="flex flex-col justify-center px-4 mt-20 max-w-md mx-auto ">
       <div className="justify-center mx-auto">
         <Image
           src="https://www.slid.cc/src/logo/slid_logo_with_text.png"

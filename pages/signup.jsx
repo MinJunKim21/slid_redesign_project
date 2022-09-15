@@ -33,7 +33,7 @@ function Signup() {
   };
 
   return (
-    <div className="flex flex-col justify-center mx-16 mt-20 max-w-xl ">
+    <div className="flex flex-col justify-center px-4 mt-20 max-w-md mx-auto">
       <div className="justify-center mx-auto">
         <span className="font-bold text-2xl">슬리드 가입하기</span>
       </div>
