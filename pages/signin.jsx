@@ -31,14 +31,16 @@ function Signin() {
 
   return (
     <div className="flex flex-col justify-center px-4 mt-20 max-w-md mx-auto ">
-      <div className="justify-center mx-auto">
-        <Image
-          src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
-          layout="fixed"
-          height={50}
-          width={100}
-          alt=""
-        />
+      <div className="justify-center mx-auto cursor-pointer">
+        <Link href="/">
+          <Image
+            src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
+            layout="fixed"
+            height={50}
+            width={100}
+            alt=""
+          />
+        </Link>
       </div>
       <button className="flex items-center justify-center space-x-3 text-lg font-semibold border border-black rounded-lg px-5 py-4  mt-8 ">
         <i className="text-xl">

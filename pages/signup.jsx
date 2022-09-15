@@ -7,6 +7,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 import useAuth from '../hooks/useAuth';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function Signup() {
   const router = useRouter();
@@ -34,8 +35,16 @@ function Signup() {
 
   return (
     <div className="flex flex-col justify-center px-4 mt-20 max-w-md mx-auto">
-      <div className="justify-center mx-auto">
-        <span className="font-bold text-2xl">슬리드 가입하기</span>
+      <div className="justify-center mx-auto cursor-pointer">
+        <Link href="/">
+          <Image
+            src="https://www.slid.cc/src/logo/slid_logo_with_text.png"
+            layout="fixed"
+            height={50}
+            width={100}
+            alt=""
+          />
+        </Link>
       </div>
       <button className="flex items-center justify-center space-x-3 text-lg font-semibold border border-black rounded-lg px-5 py-4  mt-8 ">
         <i className="text-xl">
@@ -102,7 +111,9 @@ function Signup() {
 
       <div className="mt-2 flex space-x-2">
         <span>이미 회원이신가요?</span>
-        <span className="text-[#2d85e9] mb-20">로그인</span>
+        <Link href="/signin">
+          <span className="text-[#2d85e9] mb-20 cursor-pointer">로그인</span>
+        </Link>
       </div>
     </div>
   );

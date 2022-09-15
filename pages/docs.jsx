@@ -18,28 +18,20 @@ function Docs() {
   const [showModal, setShowModal] = useRecoilState(modalState);
 
   return (
-    <div className="mx-w-xl">
+    <div className="max-w-xl">
       <div className="flex relative space-x-3 pt-12 px-4 items-center">
         <Link href="/account">
           <button className="  text-2xl">
             <CgMenu />
           </button>
         </Link>
-        {/* <button
-          onClick={() => {
-            setShowMenu(true);
-          }}
-          className="text-2xl"
-        >
-          open menu
-        </button> */}
+
         <input
           type="text"
           placeholder="🔎 제목 또는 내용을 검색하세요."
           className="px-5 py-3 w-full shadow-md rounded-full"
         />
       </div>
-      {/* <div onClick={logout}>logout</div> */}
       <div className="px-10 pt-10">
         <h3 className="font-bold">내 노트함</h3>
         <div className="flex justify-between">
