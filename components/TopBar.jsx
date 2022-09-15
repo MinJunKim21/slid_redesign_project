@@ -5,6 +5,7 @@ import { HiOutlineGlobeAlt } from 'react-icons/hi';
 
 function TopBar() {
   const { user } = useAuth();
+  const { logout } = useAuth();
 
   return (
     <div>
@@ -24,10 +25,28 @@ function TopBar() {
             </div>
 
             <div className="flex items-center text-xs font-semibold space-x-2 sm:space-x-4 sm:text-sm lg:text-base">
+              <div className="hidden md:flex md:text-gray-700 md:space-x-4">
+                <Link href="https://slid.oopy.io/career/ko/about">
+                  <span>제품 소개</span>
+                </Link>
+                <Link href="https://slid.oopy.io/career/ko/team">
+                  <span>회사 소개</span>
+                </Link>
+                <Link href="https://www.venturesquare.net/859637">
+                  <span>언론소식</span>
+                </Link>
+                <Link href="https://slid.oopy.io/career/ko">
+                  <span>채용</span>
+                </Link>
+                <span>FAQ</span>
+                <div onClick={logout} className="cursor-pointer">
+                  로그아웃
+                </div>
+              </div>
               <div className=" hidden sm:flex text-gray-600  ">
                 <Link href="https://www.slid.cc/en">
                   <div className="flex items-center space-x-2  group">
-                    <HiOutlineGlobeAlt className="lg:text-2xl md:text-xl" />
+                    <HiOutlineGlobeAlt className="lg:text-2xl sm:text-xl" />
                     <span className="hidden group-hover:flex group-hover:text-lg font-normal ">
                       Eng
                     </span>
@@ -62,6 +81,21 @@ function TopBar() {
             </Link>
 
             <div className="text-xs items-center flex font-semibold space-x-2 sm:space-x-4 sm:text-sm lg:text-base ">
+              <div className="hidden md:flex md:text-gray-700 md:space-x-4">
+                <Link href="https://slid.oopy.io/career/ko/about">
+                  <span>제품 소개</span>
+                </Link>
+                <Link href="https://slid.oopy.io/career/ko/team">
+                  <span>회사 소개</span>
+                </Link>
+                <Link href="https://www.venturesquare.net/859637">
+                  <span>언론소식</span>
+                </Link>
+                <Link href="https://slid.oopy.io/career/ko">
+                  <span>채용</span>
+                </Link>
+                <span>FAQ</span>
+              </div>
               <div className=" hidden sm:flex text-gray-600  ">
                 <Link href="https://www.slid.cc/en">
                   <div className="flex items-center space-x-2  group">
