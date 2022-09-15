@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['www.slid.cc'],
+    domains: ['www.slid.cc', 'api.producthunt.com'],
   },
   swcMinify: true,
 };
