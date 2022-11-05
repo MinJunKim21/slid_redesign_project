@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="pt-[60px] pl-2 md:flex md:flex-row-reverse items-center ">
         <div className="flex justify-center ml-3 mx-auto">
           <Image
-            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_one_click_capture.1c2c71eb.png&w=1080&q=75"
+            src="https://www.slid.cc/_next/image?url=%2Fassets%2Fdesign%2Flanding%2Fimg_main1_kr.png&w=1920&q=75"
             // layout="fill"
             height={455}
             width={635}

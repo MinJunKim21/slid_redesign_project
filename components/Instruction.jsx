@@ -22,7 +22,7 @@ function Instruction() {
         </div>
         <div className="px-4 mx-auto">
           <Image
-            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_one_click_capture.1c2c71eb.png&w=1080&q=75"
+            src="/image.webp"
             // layout="fill"
             height={455}
             width={635}
@@ -43,7 +43,7 @@ function Instruction() {
         </div>
         <div className="px-4 mx-auto">
           <Image
-            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_landing_my_docs.2662558d.png&w=640&q=75"
+            src="/image1.webp"
             // layout="fill"
             height={455}
             width={635}
@@ -65,7 +65,7 @@ function Instruction() {
         </div>
         <div className="px-4 mx-auto">
           <Image
-            src="https://www.slid.cc/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslid_share_and_export.0dcf07f4.png&w=640&q=75"
+            src="/image2.webp"
             // layout="fill"
             height={455}
             width={635}
@@ -191,7 +191,7 @@ function Instruction() {
 
         <div className="mt-7 flex justify-center mx-4">
           <Image
-            src="https://www.slid.cc/_next/image?url=%2Fsrc%2Fdesign%2Fassets%2Fslid_landing_extension_platform.png&w=640&q=75"
+            src="/image3.webp"
             // layout="fill"
             height={455}
             width={635}
